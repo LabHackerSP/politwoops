@@ -1,3 +1,4 @@
+Gemfile.lock
 config/unicorn.rb
 *.pid
 public/sitemap.xml

@@ -132,6 +132,11 @@ namespace :politicians do
       
       if row[7] then 
         party = Party.where(:name => row[7].strip).first
+        if not party then
+          party = Party.new({:name => row[7]})
+          party.save
+          party = Party.where(:name => row[7].strip).first
+        end
       end
 
       if row[8] then 
@@ -231,3 +236,4 @@ namespace :politicians do
     end
   end
 end
+

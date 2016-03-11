@@ -3,6 +3,7 @@ ruby '1.9.3'
 
 gem 'rails', '3.2.11'
 gem 'mysql2'
+gem 'activerecord-mysql2-adapter'
 gem 'memcache', '1.3.0'
 gem 'memcache-client'
 gem 'virtus', '~> 1.0.2'
@@ -11,7 +12,7 @@ gem 'httparty', '~> 0.10.0' # used for syncing Twitter avatars
 gem 'sitemap_generator', '~> 4.0'
 
 # interacting with Twitter
-gem "twitter"
+gem "twitter", '4.8.1'
 gem "oauth"
 
 gem 'twitter-text' # parsing hashtags and usernames

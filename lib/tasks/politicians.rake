@@ -101,13 +101,16 @@ namespace :politicians do
     CSV.foreach(ENV['CSV'], :col_sep => separator) do |row|
     
       #skip header row if it exists
-      if row[0] == 'First Name' then
+      if row[0] == 'First Name' or not row[6] then
         next
       end 
-
+      
       twitter_user = row[6].downcase.strip
+
       if row[4] then
-        office = Office.where(:title => row[4].downcase.strip).first
+        office = Office.where(:title => row[4].downcase.strip).first_or_create
+        office.abbreviation = row[4].downcase.strip
+        office.save
       end
 
       if row[0] then
@@ -131,11 +134,14 @@ namespace :politicians do
       end
       
       if row[7] then 
-        party = Party.where(:name => row[7].strip).first
+        party = Party.where(:name => row[7].strip).first_or_create
+        party.display_name = row[7].strip
+        party.save
       end
 
       if row[8] then 
-        account = AccountType.where(:name => row[8].downcase.strip).first
+        account = AccountType.where(:name => row[8].downcase.strip).first_or_create
+        account.save
       end
      
       if row[9] then  

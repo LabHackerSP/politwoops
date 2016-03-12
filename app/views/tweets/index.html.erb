@@ -1,16 +1,16 @@
 <p class="intro">
-  <strong>Politwoops is back! And we’re working to update and expand features that will make it easier to filter and find deleted tweets. Let us know what features you’d like to see by emailing us <a href="mailto:twoops@sunlightfoundation.com">here</a>.</strong>
+  <strong><!-- text --></strong>
 </p>
 
 <div class="title">
 	<h2>
-		Recent Politwoops
+	   Últimos tweets deletados
 	</h2>
 
   <%= render :template => "shared/filterform" %>
 
 </div>
-<div class="caveat"><p>This may be an incomplete list. If you think we're missing someone, please <a href="mailto:twoops@sunlightfoundation.com">email us</a> with their Name, State, Political Party, Office they hold or are seeking and, of course, Twitter handle. Thanks!</p>
+<div class="caveat"><p>Essa pode ser uma lista incompleta. Se você acha que estamos esquecendo alguém, por favor <a href="mailto:lab@labhacker.org.br">envie um e-mail</a> informando nome, estado, partido político, cargo que ocupam ou ao qual estão concorrendo e, é claro, o link de seu Twitter. Obrigado!</p>
 </div>
 
 <% content_for :feeds do %>
@@ -24,7 +24,7 @@
 <% end %>
 
 <% if @tweets.empty? %>
-  No results for the filter options you selected.
+  Nenhum resultado para as opções de filtro selecionadas.
 <% else %>
   <%= render :partial => "tweets/tweet", :collection => @tweets, :object => :tweet %>
 

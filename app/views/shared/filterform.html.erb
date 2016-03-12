@@ -1,7 +1,7 @@
   <form action="<%= @filter_action %>" method="GET" id="filter" class="form-inline">
 	    <ul>
 	    	<li class="styled-select">
-	    		<label for="state">State:</label>
+	    		<label for="state">Estado:</label>
 				<select name="state" id="state_filter">
 					<option value="">---------</option>
                     <% @states.each do |st| %>
@@ -12,16 +12,18 @@
 				</select>
 			</li>
 			<li class="styled-select">
-	    		<label for="party">Party:</label>
+	    		<label for="party">Partido:</label>
 				<select name="party" id="party_select" class="styled-select">
 					<option value="" >---------</option>
                     <% @parties.each do |par| %>
-        				<option value="<%=par.name%>" <% if @filters['party'] == par.name %> selected <% end %>><%=par.display_name%></option>
+        				<option value="<%=par.name%>" <% if @filters['party'] == par.name %> selected <% end %>>
+        					<%=par.name%>
+        				</option>
                     <% end %>
 				</select>
 			</li>
 			<li class="styled-select">
-	    		<label for="office">Position:</label>
+	    		<label for="office">Cargo:</label>
 				<select name="office" id="office_select" class="styled-select">
 					<option value="">---------</option>
                     <% @offices.each do |off| %>
@@ -31,7 +33,7 @@
                     <% end %>
 				</select>
 			</li>
-	    <button type="submit" class="btn">Filter</button>
+	    <button type="submit" class="btn">Filtro</button>
 		</ul>
 	</form>
 

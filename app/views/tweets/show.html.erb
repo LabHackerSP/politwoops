@@ -1,5 +1,5 @@
 <% content_for :title do %>
-    Deleted tweet from <%= @tweet.details['user']['name'] %>
+    Tweet deletado de <%= @tweet.details['user']['name'] %>
 <% end %>
 
 <%= render :partial => "tweets/tweet", :locals => {:tweet => @tweet} %>

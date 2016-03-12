@@ -115,7 +115,7 @@ button, .buttonLink { width: auto; text-indent: -9999em; display: block; border:
 
 body {
 	margin: 0 auto;
-	background: url(/images/sfapp_bg.jpg) center 45px repeat-x;
+	background: url(/images/sfapp_bg.jpg) center 0px repeat-x;
 	font-family: "helvetica neue", helvetica, arial, sans-serif;
 	color: #625953;
 }

@@ -3,27 +3,25 @@
 <head>
 	<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
   <% if content_for?(:title) %>
-    <title><%= yield(:title) %> - Politwoops</title>
+    <title><%= yield(:title) %> - Podemos tirar se achar melhor</title>
   <% else %>
-    <title>Politwoops - <%= t :slogan, :scope => [:politwoops] %><% if not @page.nil? and @page > 1 %> (Page <%= @page %>)<% end %></title>
+    <title>Podemos tirar se achar melhor - <%= t :slogan, :scope => [:politwoops] %><% if not @page.nil? and @page > 1 %> (Page <%= @page %>)<% end %></title>
   <% end %>
   <%= JavascriptExports %>
 
     <meta name="google-site-verification" content="CQWBNRNvRMb4Gd5s2HE03-2g5Dkk3VvvGwZbeNmd5H8" />
     <meta property="og:url" content="<%= url_for(:only_path => false) %>">
-    <meta property="og:title" content="Politwoops US">
-    <meta property="og:description" content="Politwoops is the only comprehensive collection of deleted tweets by U.S. politicians that offers a window into what they hoped you didn't see.">
+    <meta property="og:title" content="Podemos tirar se achar melhor">
+    <meta property="og:description" content="Podemos tirar se achar melhor é um arquivo de tweets deletados por políticos brasileiros que oferece uma visão daquilo que eles esperavam que você não visse.">
     <meta property="og:image" content="<%= root_url %>images/og_politwoops.jpg">
     <meta property="og:image:url" content="<%= root_url %>images/og_politwoops.jpg">
     <meta property="og:image:width" content="200">
     <meta property="og:image:height" content="200">
-    <meta name="description" content="Politwoops is the only comprehensive collection of deleted tweets by U.S. politicians that offers a window into what they hoped you didn't see.">
+    <meta name="description" content="Podemos tirar se achar melhor é um arquivo de tweets deletados por políticos brasileiros que oferece uma visão daquilo que eles esperavam que você não visse.">
 
 	<%= stylesheet_link_tag "colorbox" %>
 	<%= stylesheet_link_tag "style" %>
-  <link rel="stylesheet" href="https://sunlight-cdn.s3.amazonaws.com/brandingbar/0.4/css/brandingbar.min.css">
-  <link rel="stylesheet" href="https://sunlight-cdn.s3.amazonaws.com/sf-icons/0.2/css/sf-icons.css">
-	<script type="text/javascript" src="//use.typekit.net/utl6xyx.js"></script>
+  <script type="text/javascript" src="//use.typekit.net/utl6xyx.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 	<%= content_for :head %>
@@ -38,7 +36,6 @@
 	<%= content_for :feeds %>
 </head>
 <body<%if content_for?(:body_class) %> <%= yield(:body_class) %> <% end %>>
-  <div class="branding-bar" data-bb-brandingbar="true"></div>
   <script>
     $(document).ready(function() {
         $("a.screenshot").each(function(idx, a){
@@ -62,17 +59,14 @@
 			<nav>
 				<ul>
 					<li>
-						<a href="/users">Politicians</a>
+						<a href="/users">Políticos</a>
 					</li>
 					<li>
-						<a href="http://sunlightfoundation.com/blog/tag/politwoops/">More information</a>
+						<a href="http://sunlightfoundation.com/blog/tag/politwoops/">Mais informação</a>
 					</li>
 					<li>
-						<a href="mailto:twoops@sunlightfoundation.com">Contact us</a>
+						<a href="mailto:lab@labhacker.org.br">Contato</a>
 					</li>
-          <li>
-            <a href="http://sunlightfoundation.com/join">Get Involved</a>
-          </li>
 				</ul>
                 <div id="socialMedia" style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; visibility: visible;">
                     <div class="share-buttons" data-socialite="auto" data-services="twitter-tweet, facebook-like" data-options="linkback=<%= escape_javascript request.url %>" data-facebook-like-options="width=100&amp;colorscheme=light&amp;show-faces=false&amp;layout=button_count" data-twitter-tweet-options="text=Track the deleted tweets of U.S. politicians using Politwoops (from @SunFoundation):&amp;url=<%= escape_javascript request.url %>">
@@ -80,10 +74,10 @@
 
 				</div>
 			</nav>
-			<h1><a class="textReplace clear" href="/">Politwoops <small>Deleted Tweets from Politicians</small></a></h1>
+			<h1><a class="textReplace clear" href="/">Podemos Tirar se Achar Melhor <small> Tweets deletados de políticos</small></a></h1>
 			<form action="/" method="get" id="search">
-				<input type="search" placeholder="Search" name="q" value="<%= h params[:q] %>"/>
-				<button class="textReplace" id="searchBtn">search</button>
+				<input type="search" placeholder="Procure um político" name="q" value="<%= h params[:q] %>"/>
+				<button class="textReplace" id="searchBtn">busca</button>
 			</form>
 			<div class="clear"></div>
 
@@ -92,16 +86,18 @@
 			<img class="twoopsters" src="/images/twoopsters.png">
 			<div class="module">
 				<p id="intro">
-        An archive of the public statements deleted by U.S. politicians. <strong>Explore the tweets they would prefer you couldn't see.</strong>
+        Conheça o portal <strong>Podemos Tirar se Achar Melhor</strong> de tweets apagados por políticos.
+        Um arquivo de declarações públicas apagadas por políticos brasileiros. Explore os tweets que eles preferiam que você não visse.
 				</p>
 				<p id="terms">
-				If you aren't an elected official or running for office and feel
-        your account is being tracked by mistake then please <a href="mailto:twoops@sunlightfoundation.com">contact us</a>.
+				Se você não é candidato nem oficialmente eleito e acredita que sua conta esteja sendo rastreada por engano, por favor, entre em <a href="mailto:lab@labhacker.org.br">contato</a> conosco.
 				</p>
 			</div>
 			<div class="module">
-				<h4>Original Dutch version:</h4>
+				<h4>Versão Holandesa original:</h4>
 				<a href="http://politwoops.nl">Politwoops.nl</a>
+        <h4>Versão Americana original:</h4>
+        <a href="http://politwoops.sunlightfoundation.com">Politwoops U.S.</a>
 			</div>
 		</div>
 
@@ -115,18 +111,11 @@
 	<footer>
             <div class="container">
                 <div class="signup">
-                    <h4>Like this Project and Want to Discover Others Like It?</h4>
-                    <span class="tip">Join the Sunlight Foundation's open government community to learn more</span>
-                    <form action="/subscribe/" method="post" id="sfapp-subscribe-form" class="form-inline">
-                        <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="y42oYsUK2EGBAkFj265Bv8Q4BqDCNS8S"></div>
-                        <input type="text" name="email" placeholder="your email address">
-                        <input type="text" name="zipcode" placeholder="your zip code">
-                        <button type="submit" class="btn btn-sunlight">Sign Up</button>
-                    </form>
+                    <h4>Curtiu esse projeto e quer descobrir outros semelhantes?</h4>
+                    <span class="tip">Participe da comunidade <a href="https://groups.google.com/group/thackday/">Transparência Hacker</a>.</span>
                 </div>
                 <div class="span6 terms">
-                    <p>Our <a href="http://sunlightfoundation.com/legal/privacy/">privacy policy</a> details how personally identifiable information that is collected on our web sites is handled. Read our <a href="http://sunlightfoundation.com/legal/terms/">terms of service</a>.</p>
-                    <p>This work by <a href="http://sunlightfoundation.com">Sunlight Foundation</a>, unless <a href="http://sunlightfoundation.com/colophon/">otherwise noted</a>, is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>.</p>
+                    <p>Esse projeto é mantido pelo <a href="http://labhacker.org.br">LabHacker</a> e esta licenciado em <a href="http://creativecommons.org/licenses/by/3.0/br/">Creative Commons Atribuição 3.0 Brasil</a>.</p>
                 </div>
             </div>
         </footer>
@@ -136,41 +125,6 @@
         <%= javascript_include_tag "opencivicdataapi" %>
         <%= javascript_include_tag "politwoops" %>
 
-        <% if @donor_banner_enabled %>
-          <!-- BEGIN SMALL DONOR BANNER -->
-          <div id="donor_banner" class="minimize-donorbanner">
-              <div class="donorcontainer">
-                  <div class="bubble">
-                      <button value="play" href="" class="notnow toggleButton" style="box-shadow: none;">Not now</button>
-                  </div>
-                  <a class="sf_logo" href="http://sunlightfoundation.com">Sunlight Foundation</a>
-                  <p class="because quote">
-                  &ldquo;I came to Sunlight because I believe technology is incredibly powerful and government is incredibly important. I don't think there's any better place for working to bring the two together.&rdquo;
-                  <span class="attribution">&mdash; <em>Tom Lee</em></span>
-              </p>
-                  <div class="donationplea">
-                      <h2>
-                          <span class="line1">We depend </span>
-                          <span class="line2">on the generosity</span>
-                          <span class="line3">of our supporters</span>
-                      </h2>
-                      <p>
-                          <em>You can help bring sunlight to government.</em>
-                          </br>Donate to the Sunlight Foundation today.
-                      </p>
-                      <a class="btn" href="https://sunlightfoundation.com/donate/opencongress/">Donate</a>
-                  </div>
-              </div>
-          </div>
-          <%= javascript_include_tag "donorbanner.js" %>
-          <!-- END SMALL DONOR BANNER -->
-        <% end %>
-
-        <script type="text/javascript" src="https://s3.amazonaws.com/assets.sunlightfoundation.com/social/scripts/simple-socialite-pack.min.js"></script>
-        <script src="https://sunlight-cdn.s3.amazonaws.com/brandingbar/0.4/js/brandingbar.min.js.gz"></script>
-        <!--[if IE 8]>
-          <script src="http://sf-icons.s3.amazonaws.com/js/sf-icons.js"></script>
-        <![endif]-->
-	<%= render :partial => "layouts/analytics" %>
+        <%= render :partial => "layouts/analytics" %>
   </body>
 </html>

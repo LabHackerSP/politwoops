@@ -1,10 +1,10 @@
 	<h2>
-		Politicians We Follow
+		Políticos que nós seguimos
 	</h2>
 
     <%= render :template => "shared/filterform" %>
 
-<div class="caveat"><p>This may be an incomplete list. If you think we're missing someone, please <a href="mailto:twoops@sunlightfoundation.com">email us</a> with their Name, State, Political Party, Office they hold or are seeking and, of course, Twitter handle. Thanks!</p>
+<div class="caveat"><p>Essa pode ser uma lista incompleta. Se você acha que estamos esquecendo alguém, por favor <a href="mailto:lab@labhacker.org.br">envie um e-mail</a> informando nome, estado, partido político, cargo que ocupam ou ao qual estão concorrendo e, é claro, o link de seu Twitter. Obrigado!</p>
 </div>
 
 	<table class="politicians">
@@ -49,7 +49,7 @@
 			<td class="party">
 				<span>
 				<% if pol.party %> <%= pol.party.display_name %> <% end %>
-				<% if pol.status ==  4 %><em>inactive</em> <% end %>
+				<% if pol.status ==  4 %><em>inativo</em> <% end %>
 				</span>
 			</td>
 		</tr>

@@ -1,12 +1,12 @@
 <% content_for :title do %>
-  Deleted tweets for <%= office_title_for(@politician) %> <%= @politician.first_name %> <%=@politician.last_name %> (<%= party_name_for(@politician) %>)<% if @page > 1 %> (Page <%= @page %>)<% end %>
+  Tweets deletados de <%= office_title_for(@politician) %> <%= @politician.first_name %> <%=@politician.last_name %> (<%= party_name_for(@politician) %>)<% if @page > 1 %> (Page <%= @page %>)<% end %>
 <% end %>
 
 <div id="info">
 	<h2><%= office_abbr_for(@politician) %> <%= @politician.first_name %> <%=@politician.last_name %> (<%= party_name_for(@politician) %>)</h2>
 	<ul class="accountList">
 		<li id="all-label" class="active">
-			<a class="accountHandle" href="#"><span>All Tweets</span></a>
+			<a class="accountHandle" href="#"><span>Todos Tweets</span></a>
 		</li>
         <% @accounts.each do |acc| %>
 		<li id="<%= acc.user_name %>-label">
@@ -18,7 +18,7 @@
     <% @accounts.each do |acc| %>
 	<div class="aboutAccount" id="<%= acc.user_name %>" style="display:none;">
 		<p> 
-			<% if @tweet_map[acc.user_name][0] %> <%= @tweet_map[acc.user_name][0].details['user']['description'] %> <% end %><a href="http://twitter.com/<%=acc.user_name%>">twitter page</a>  
+			<% if @tweet_map[acc.user_name][0] %> <%= @tweet_map[acc.user_name][0].details['user']['description'] %> <% end %><a href="http://twitter.com/<%=acc.user_name%>">twitter</a>  
 		</p>
 	</div>
     <% end %>

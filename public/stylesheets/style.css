@@ -64,6 +64,9 @@ html { overflow-y: scroll; }
 iframe { display: block; margin: 10px 0; }
 
 a:hover, a:active { outline: none; }
+header a, header a:active, header a:visited { color: #fff399; text-decoration: none;}
+header a:hover { color: #ffffff; text-decoration: underline;}
+
 a, a:active, a:visited { color: #068797; text-decoration: none;}
 a:hover { color: #063e5c; text-decoration: underline;}
 
@@ -115,7 +118,7 @@ button, .buttonLink { width: auto; text-indent: -9999em; display: block; border:
 
 body {
 	margin: 0 auto;
-	background: url(/images/sfapp_bg.jpg) center 0px repeat-x;
+	background: url(/images/br/bg.jpg) center 0px repeat-x;
 	font-family: "helvetica neue", helvetica, arial, sans-serif;
 	color: #625953;
 }
@@ -275,7 +278,6 @@ button:disabled {
 
 /* header */
 header {
-	background: url(/images/bg_header.png) 30px bottom no-repeat;
 	height: 209px;
 	margin-bottom: 54px;
 	position: relative;
@@ -288,7 +290,7 @@ h1 {
 	float: left;
 	margin-top: 70px;
 }
-h1 a { background: url(/images/logo.png) top left no-repeat; height: 78px; width: 370px; }
+h1 a { background: url(/images/br/twoops_loops.png) top left no-repeat; height: 84px; width: 370px; }
 nav {
 	position: relative;
 }
@@ -302,7 +304,7 @@ nav ul li{
 	display: inline;
 	padding-right: 20px;
 	margin-right: 20px;
-	border-right: 1px solid #068797;
+	border-right: 1px solid #fff399;
 	font-weight: bold;
 }
 nav ul li:last-child{
@@ -321,7 +323,6 @@ nav ul li:last-child{
 }
 #search {
 	float: right;
-	background: url(/images/bg_search.png) left top no-repeat;
 	padding-top: 8px;
 	padding-left: 8px;
 	margin-top: 90px;
@@ -351,7 +352,7 @@ nav ul li:last-child{
 }
 
 #searchBtn{
-	background: url(/images/search.png) left -1px no-repeat;
+	background: url(/images/br/ico_lupa.png) left bottom no-repeat;
 	width: 43px;
 	height: 43px;
 	float: left;
@@ -362,7 +363,7 @@ nav ul li:last-child{
     box-shadow:  none;
 }
 #searchBtn:hover{
-	background: url(/images/search.png) left bottom no-repeat;
+	background: url(/images/br/ico_lupa.png) left bottom no-repeat;
 
 }
 
@@ -421,18 +422,8 @@ h4, #filter label {
 	font-weight: 700;
 	color: #063e5c;
 }
-.twoopsters{
-	margin-top: -103px;
-	margin-left: -30px;
-	margin-bottom: 12px;
-}
+
 #otherOrg { font-size: 140%; color: #504C49;}
-
-
-
-
-
-
 
 /* tweets */
 
@@ -1115,4 +1106,29 @@ a.retired-close:hover {
 }
 .retired a{
   color: #d5b400 !important; 
+}
+
+
+.twoopsters {
+	width:0px;
+	height:0px;
+	padding-top:232px;
+	margin-top: -103px;
+	margin-left: -30px;
+	margin-bottom: 12px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #db7844;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #db7844;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #db7844;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #db7844;
 }

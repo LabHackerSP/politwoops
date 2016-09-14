@@ -2,9 +2,9 @@
 module TweetsHelper
   def default_avatar_url (pol)
     if pol.female?
-      "/images/avatar_missing_female.png"
+      "/images/br/avatar_feminino.png"
     else
-      "/images/avatar_missing_male.png"
+      "/images/br/avatar_masculino.png"
     end
   end
 
